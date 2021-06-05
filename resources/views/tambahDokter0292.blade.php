@@ -23,7 +23,10 @@
                     <input type="text" class="form-control" id="jabatan" name="jabatan">
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                
             </form>
         </div>
         <div class="col"></div>
