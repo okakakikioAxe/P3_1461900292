@@ -19,6 +19,7 @@
                 <th scope="col">nama</th>
                 <th scope="col">username</th>
                 <th scope="col">password</th>
+                <th scope="col">Option</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,11 @@
                 <td>{{ $user->nama }}</td>
                 <td>{{ $user->username }}</td>
                 <td>{{ $user->password }}</td>
+                <td>
+                    <a class="btn btn-info " href="{{ url('user/'.$user->id) }}" role="button">Detail</a>
+                    <a class="btn btn-warning " href="{{ url('user/'.$user->id.'/edit') }}" role="button">Edit</a>
+                    <a class="btn btn-danger " href="#" role="button">Delete</a>
+                </td>
             </tr>
         @endforeach
         </tbody>

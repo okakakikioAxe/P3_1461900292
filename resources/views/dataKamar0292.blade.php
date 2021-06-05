@@ -18,6 +18,7 @@
                 <th scope="col">id</th>
                 <th scope="col">id pasien</th>
                 <th scope="col">id dokter</th>
+                <th scope="col">Option</th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,11 @@
                 <td>{{ $kamar->id }}</td>
                 <td>{{ $kamar->id_pasien }}</td>
                 <td>{{ $kamar->id_dokter }}</td>
+                <td>
+                    <a class="btn btn-info " href="{{ url('kamar/'.$kamar->id) }}" role="button">Detail</a>
+                    <a class="btn btn-warning " href="{{ url('kamar/'.$kamar->id.'/edit') }}" role="button">Edit</a>
+                    <a class="btn btn-danger " href="#" role="button">Delete</a>
+                </td>
             </tr>
         @endforeach
         </tbody>
