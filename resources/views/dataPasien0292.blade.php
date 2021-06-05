@@ -30,7 +30,7 @@
                 <td>
                     <a class="btn btn-info " href="{{ url('pasien/'.$pasien->id) }}" role="button">Detail</a>
                     <a class="btn btn-warning " href="{{ url('pasien/'.$pasien->id.'/edit') }}" role="button">Edit</a>
-                    <a class="btn btn-danger " href="#" role="button">Delete</a>
+                    <a class="btn btn-danger " href="{{ url('pasien/'.$pasien->id.'/delete') }}" role="button" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');">Delete</a>
                 </td>
             </tr>
         @endforeach
