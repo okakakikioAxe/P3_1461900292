@@ -3,6 +3,14 @@
 @section('title', 'Data Kamar')
 
 @section('tabel')
+    <div class="container text-left">
+        <div class="row">
+            <div class="col">
+                <a class="btn btn-primary" href="{{ url('user/create') }}" role="button">add+</a>
+            </div>
+        </div>
+    </div>
+    <br>
     <div class="container text-center">
     <table class="table">
         <thead>
