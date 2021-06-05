@@ -83,7 +83,7 @@ class DokterController extends Controller
         $dokter->nama = $nama;
         $dokter->jabatan = $jabatan;
         $dokter->save();
-        return redirect()->route('dokter.index');
+        return view('dataDokter0292');
     }
 
     /**
