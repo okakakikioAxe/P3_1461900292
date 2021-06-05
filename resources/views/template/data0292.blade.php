@@ -7,9 +7,9 @@
         Pilih Data   
     </button>
     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        <li><a class="dropdown-item" href="#">Dokter</a></li>
+        <li><a class="dropdown-item" href="{{ url('dokter') }}">Dokter</a></li>
         <li><a class="dropdown-item" href="#">Pasien</a></li>
-        <li><a class="dropdown-item" href="#">Kamar</a></li>
+        <li><a class="dropdown-item" href="{{ url('kamar') }}">Kamar</a></li>
         <li><a class="dropdown-item" href="#">User</a></li>
     </ul>
     </div>
