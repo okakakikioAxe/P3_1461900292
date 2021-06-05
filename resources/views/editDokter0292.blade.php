@@ -10,7 +10,7 @@
                 @method('PUT')
                 <div class="mb-3">
                     <label for="id" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" name="id"  disabled>
+                    <input type="text" class="form-control" id="id" name="id" value="{{ $dokter->id }}"  disabled>
                 </div>
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
