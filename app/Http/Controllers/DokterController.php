@@ -46,7 +46,8 @@ class DokterController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Dokter::findOrFail($id);
+        return view('detailDokter0292', ['data'=>$data]);
     }
 
     /**
