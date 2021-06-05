@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\KamarController;
+use App\Http\Controllers\PasienController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +22,5 @@ Route::get('/', function () {
 
 Route::resource('dokter', DokterController::class);
 Route::resource('kamar', KamarController::class);
+Route::resource('pasien', PasienController::class);
+Route::resource('user', UserController::class);
