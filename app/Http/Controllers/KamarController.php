@@ -78,7 +78,10 @@ class KamarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pasien = $request->pasien;
+        $dokter = $request->dokter;
+        Kamar::where('id',$id)->update(['id_pasien'=>$pasien,'id_dokter'=>$dokter]);
+        return redirect()->route('kamar.index');
     }
 
     /**

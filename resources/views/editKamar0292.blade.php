@@ -5,7 +5,7 @@
 @section('konten')
     <div class="container">
         @foreach ($data as $kamar)
-            <form action="{{ url('kamar/'.$kamar->id) }}">
+            <form action="{{ url('kamar/'.$kamar->id) }}" method="post">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
