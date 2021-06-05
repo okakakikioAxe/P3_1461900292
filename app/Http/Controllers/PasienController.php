@@ -59,7 +59,8 @@ class PasienController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Pasien::where('id',$id)->get();
+        return view('editPasien0292', ['data'=>$data]);
     }
 
     /**

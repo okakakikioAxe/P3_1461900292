@@ -59,7 +59,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = User::where('id',$id)->get();
+        return view('editUser0292', ['data'=>$data]);
     }
 
     /**

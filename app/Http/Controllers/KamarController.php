@@ -59,7 +59,8 @@ class KamarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Kamar::where('id',$id)->get();
+        return view('editKamar0292', ['data'=>$data]);
     }
 
     /**
