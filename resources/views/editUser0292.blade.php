@@ -22,15 +22,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="jabatan" class="form-label">Password Lama</label>
-                    <input type="text" class="form-control" id="pw1" name="pw1">
+                    <input type="password" class="form-control" id="pw1" name="pw1">
                 </div>
                 <div class="mb-3">
                     <label for="jabatan" class="form-label">Password Baru</label>
-                    <input type="text" class="form-control" id="pw2" name="pw2">
+                    <input type="password" class="form-control" id="pw2" name="pw2">
                 </div>
                 <div class="mb-3">
                     <label for="jabatan" class="form-label">Ketik Ulang Password Baru</label>
-                    <input type="text" class="form-control" id="pw3" name="pw3">
+                    <input type="password" class="form-control" id="pw3" name="pw3">
                 </div>
                 
                 
