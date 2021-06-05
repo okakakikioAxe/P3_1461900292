@@ -25,7 +25,7 @@ class KamarController extends Controller
      */
     public function create()
     {
-        //
+        return view('tambahKamar0292');
     }
 
     /**
