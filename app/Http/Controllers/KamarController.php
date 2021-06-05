@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kamar;
+use App\Models\Pasien;
+use App\Models\Dokter;
 
 class KamarController extends Controller
 {
@@ -38,11 +40,39 @@ class KamarController extends Controller
     {
         $pasien = $request->pasien;
         $dokter = $request->dokter;
-        $kamar = new Kamar;
-        $kamar->id_pasien = $pasien;
-        $kamar->id_dokter = $dokter;
-        $kamar->save();
-        return redirect()->route('kamar.index');
+        $data_pasien = Pasien::where('id',$pasien)->get();
+        $data_dokter = Dokter::where('id',$dokter)->get();
+        $cek_pasien = '';
+        $cek_dokter = '';
+        foreach( $data_pasien as $p){
+            $cek_pasien = $p->id;
+        }
+        foreach( $data_dokter as $d){
+            $cek_dokter = $d->id;
+        }
+
+        if(($cek_pasien != '' || $cek_pasien != null)  ||  ($cek_dokter != '' || $cek_dokter != null)){
+            return back()->withInput();
+        }
+        else{
+            $kamar = Kamar::where('id_pasien',$pasien)->get();
+            $cek_kamar = '';
+            foreach($kamar as $k){
+                $cek_kamar = $k->id_pasien;
+            }
+            if($cek_kamar == null || $cek_kamar == ''){
+                $kamar = new Kamar;
+                $kamar->id_pasien = $pasien;
+                $kamar->id_dokter = $dokter;
+                $kamar->save();
+                return redirect()->route('kamar.index');
+            }
+            else{
+                return back()->withInput();
+            }
+            
+        }
+        
     }
 
     /**
