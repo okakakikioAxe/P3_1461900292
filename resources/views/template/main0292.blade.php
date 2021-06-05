@@ -20,7 +20,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#" style="color:#181fed;">Data</a>
+                    <a class="nav-link active" aria-current="page" href="{{ url('dokter') }}" style="color:#181fed;">Data</a>
                 </div>
                 </div>
             </div>
