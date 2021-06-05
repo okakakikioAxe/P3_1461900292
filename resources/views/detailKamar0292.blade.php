@@ -31,7 +31,7 @@
                 <h2>Id Dokter</h2>
             </div>
             <div class="col">
-                <h2>: {{ $kamar->id_kamar }}</h2>
+                <h2>: {{ $kamar->id_dokter }}</h2>
             </div>  
         </div>
     </div>
