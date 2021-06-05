@@ -9,4 +9,5 @@ class Dokter extends Model
 {
     protected $table = 'dokter';
     protected $primaryKey = 'id';
+    public $timestamps = false;
 }
