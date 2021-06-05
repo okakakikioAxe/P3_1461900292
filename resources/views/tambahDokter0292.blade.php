@@ -10,13 +10,8 @@
             <br>
             <h2 class="text-center">Tambah Dokter</h2>
             <br>
-            <form action="{{ url('dokter') }}">
+            <form action="{{ url('dokter') }}" method="post">
                 @csrf
-                @method('POST')
-                <div class="mb-3">
-                    <label for="id" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" name="id">
-                </div>
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama">
