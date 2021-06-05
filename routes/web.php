@@ -24,3 +24,5 @@ Route::resource('dokter', DokterController::class);
 Route::resource('kamar', KamarController::class);
 Route::resource('pasien', PasienController::class);
 Route::resource('user', UserController::class);
+
+Route::get('dokter/{id}/delete', [DokterController::class, 'destroy']);

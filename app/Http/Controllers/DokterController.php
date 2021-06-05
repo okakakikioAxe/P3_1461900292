@@ -88,6 +88,7 @@ class DokterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dokter = Dokter::where('id',$id)->delete();
+        return redirect()->route('dokter.index');
     }
 }
