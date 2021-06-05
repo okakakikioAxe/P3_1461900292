@@ -35,7 +35,13 @@ class DokterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nama = $request->get('nama');
+        $jabatan = $request->get('jabatan');
+        $dokter = new Dokter;
+        $dokter->nama = $nama;
+        $dokter->jabatan = $jabatan;
+        $dokter->save();
+        return redirect()->route('dokter.index');
     }
 
     /**
