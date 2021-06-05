@@ -8,9 +8,9 @@
     </button>
     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
         <li><a class="dropdown-item" href="{{ url('dokter') }}">Dokter</a></li>
-        <li><a class="dropdown-item" href="#">Pasien</a></li>
+        <li><a class="dropdown-item" href="{{ url('pasien') }}">Pasien</a></li>
         <li><a class="dropdown-item" href="{{ url('kamar') }}">Kamar</a></li>
-        <li><a class="dropdown-item" href="#">User</a></li>
+        <li><a class="dropdown-item" href="{{ url('user') }}">User</a></li>
     </ul>
     </div>
 </div>
