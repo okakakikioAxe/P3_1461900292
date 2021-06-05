@@ -36,7 +36,13 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nama = $request->nama;
+        $alamat = $request->alamat;
+        $pasien = new Pasien;
+        $pasien->nama = $nama;
+        $pasien->alamat = $alamat;
+        $pasien->save();
+        return redirect()->route('pasien.index');
     }
 
     /**

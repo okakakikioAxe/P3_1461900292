@@ -36,7 +36,13 @@ class KamarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pasien = $request->pasien;
+        $dokter = $request->dokter;
+        $kamar = new Kamar;
+        $kamar->id_pasien = $pasien;
+        $kamar->id_dokter = $dokter;
+        $kamar->save();
+        return redirect()->route('kamar.index');
     }
 
     /**
