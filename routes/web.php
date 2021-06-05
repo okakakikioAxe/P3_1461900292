@@ -26,3 +26,6 @@ Route::resource('pasien', PasienController::class);
 Route::resource('user', UserController::class);
 
 Route::get('dokter/{id}/delete', [DokterController::class, 'destroy']);
+Route::get('kamar/{id}/delete', [KamarController::class, 'destroy']);
+Route::get('pasien/{id}/delete', [PasienController::class, 'destroy']);
+Route::get('user/{id}/delete', [UserController::class, 'destroy']);
