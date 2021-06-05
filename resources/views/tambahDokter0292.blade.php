@@ -4,10 +4,12 @@
 
 @section('konten')
     <div class="container">
-        <br>
-        <h2>Tambah Dokter</h2>
-        <br>
-        @foreach ($data as $dokter)
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <br>
+            <h2 class="text-center">Tambah Dokter</h2>
+            <br>
             <form action="{{ url('dokter') }}">
                 @csrf
                 @method('POST')
@@ -27,6 +29,10 @@
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-        @endforeach
+        </div>
+        <div class="col"></div>
+    </div>
+            
+
     </div>
 @endsection
