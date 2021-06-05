@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Kamar;
 
 class KamarController extends Controller
 {
@@ -13,7 +14,8 @@ class KamarController extends Controller
      */
     public function index()
     {
-        //
+        $data = Kamar::all();
+        return view('dataKamar0292', ['data'=>$data]);
     }
 
     /**
