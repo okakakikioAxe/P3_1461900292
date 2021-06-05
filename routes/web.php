@@ -31,3 +31,4 @@ Route::get('pasien/{id}/delete', [PasienController::class, 'destroy']);
 Route::get('user/{id}/delete', [UserController::class, 'destroy']);
 
 Route::post('dokter/filter',[DokterController::class, 'filter']);
+Route::post('pasien/filter',[PasienController::class, 'filter']);

@@ -95,4 +95,10 @@ class PasienController extends Controller
         Pasien::where('id',$id)->delete();
         return redirect()->route('pasien.index');
     }
+
+    public function filter(Request $request){
+        $alamat= $request->nama;
+        $data = Pasien::where('alamat',$alamat)->get();
+        return view('dataPasien0292', ['data'=>$data]);
+    }
 }
