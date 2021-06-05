@@ -13,12 +13,7 @@
             <li><a class="dropdown-item" href="{{ url('user') }}">User</a></li>
         </ul>
         </div>
-    </div>
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"><a class="btn btn-primary " href="{{ url('dokter/create') }}" role="button">add+</a></div>
-    </div>    
+    </div>   
 </div>
     
 <br>
