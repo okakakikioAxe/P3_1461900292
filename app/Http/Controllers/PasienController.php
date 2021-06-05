@@ -78,7 +78,10 @@ class PasienController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $nama = $request->nama;
+        $alamat = $request->alamat;
+        Pasien::where('id',$id)->update(['nama'=>$nama,'alamat'=>$alamat]);
+        return redirect()->route('pasien.index');
     }
 
     /**
