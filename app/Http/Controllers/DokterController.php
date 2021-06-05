@@ -24,7 +24,7 @@ class DokterController extends Controller
      */
     public function create()
     {
-        //
+        return view('tambahDokter0292');
     }
 
     /**
