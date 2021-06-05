@@ -94,4 +94,10 @@ class DokterController extends Controller
         $dokter = Dokter::where('id',$id)->delete();
         return redirect()->route('dokter.index');
     }
+
+    public function filter(Request $request){
+        $jabatan = $request->nama;
+        $data = Dokter::where('jabatan',$jabatan)->get();
+        return view('dataDokter0292', ['data'=>$data]);
+    }
 }
