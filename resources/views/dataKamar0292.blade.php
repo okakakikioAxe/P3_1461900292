@@ -8,6 +8,26 @@
             <div class="col">
                 <a class="btn btn-primary" href="{{ url('kamar/create') }}" role="button">add+</a>
             </div>
+            <div class="col">
+                <div class="container">
+                        
+                        <form action="{{ url('kamar/filter') }}" method="post">
+                            @csrf
+                            @method('POST')
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="masukkan id dokter" id="nama" name="nama">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Filter</button>
+                                </div>
+                            </div>
+                        </form>
+                    
+                </div>
+            </div>
         </div>
     </div>
     <br>

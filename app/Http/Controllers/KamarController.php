@@ -95,4 +95,10 @@ class KamarController extends Controller
         Kamar::where('id',$id)->delete();
         return redirect()->route('kamar.index');
     }
+
+    public function filter(Request $request){
+        $dokter = $request->nama;
+        $data = Kamar::where('id_dokter',$dokter)->get();
+        return view('dataKamar0292', ['data'=>$data]);
+    }
 }
