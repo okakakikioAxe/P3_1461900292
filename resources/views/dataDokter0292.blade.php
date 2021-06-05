@@ -11,7 +11,7 @@
             <div class="col">
                 <div class="container">
                     
-                        <form action="{{ url('dokter') }}" method="post">
+                        <form action="{{ url('dokter/filter') }}" method="post">
                             @csrf
                             @method('POST')
                             <div class="row">
