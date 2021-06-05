@@ -58,7 +58,8 @@ class DokterController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Dokter::where('id',$id)->get();
+        return view('editDokter0292', ['data'=>$data]);
     }
 
     /**
