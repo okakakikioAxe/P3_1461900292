@@ -92,6 +92,7 @@ class KamarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Kamar::where('id',$id)->delete();
+        return redirect()->route('kamar.index');
     }
 }

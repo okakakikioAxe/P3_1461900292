@@ -92,6 +92,7 @@ class PasienController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Pasien::where('id',$id)->delete();
+        return redirect()->route('pasien.index');
     }
 }
