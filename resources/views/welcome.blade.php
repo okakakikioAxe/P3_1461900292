@@ -1,19 +1,9 @@
-@extends('template.main0292')
+@extends('template.data0292')
 
-@section('title','home')
+@section('title','data')
 
-@section('konten')
+@section('tabel')
 <div class="container">
-    <h1>Selamat datang di</h1>
-    <h1>Sistem Informasi</h1>
-    <h1>Rumah Sakit .</h1>
+<h1>Oke</h1>
 </div>
-@endsection
-
-@section('style')
-<style>
-    h1{
-        color : #801ee3;
-    }
-</style>
 @endsection
