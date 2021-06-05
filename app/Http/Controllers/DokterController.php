@@ -46,7 +46,7 @@ class DokterController extends Controller
      */
     public function show($id)
     {
-        $data = Dokter::findOrFail($id);
+        $data = Dokter::where('id',$id)->get();
         return view('detailDokter0292', ['data'=>$data]);
     }
 
