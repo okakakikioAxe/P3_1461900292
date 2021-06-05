@@ -14,7 +14,7 @@ use App\Http\Controllers\DokterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home0292');
 });
 
 Route::resource('dokter', DokterController::class);
