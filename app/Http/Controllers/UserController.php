@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('tambahUser0292');
     }
 
     /**
@@ -36,7 +36,31 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nama = $request->nama;
+        $username = $request->username;
+        $user = User::where('username',$username)->get();
+        $username2 = '';
+        foreach($user as $u){
+            $username2 = $u->username;
+        }
+        if($username2 == null || $username2 == ''){
+            $pw1 = $request->pw1;
+            $pw2 = $request->pw2;
+            if($pw1 == $pw2){
+                $user = new User;
+                $user->nama = $nama;
+                $user->username = $username;
+                $user->password = $pw1;
+                $user->save();
+                return redirect()->route('user.index');
+            }
+            else{
+                return back()->withInput();
+            }
+        }
+        else{
+            return back()->withInput();
+        }
     }
 
     /**
