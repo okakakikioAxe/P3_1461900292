@@ -77,7 +77,13 @@ class DokterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $nama = $request->nama;
+        $jabatan = $request->jabatan;
+        $dokter = Dokter::where('id',$id)->get();
+        $dokter->nama = $nama;
+        $dokter->jabatan = $jabatan;
+        $dokter->save();
+        return redirect()->route('dokter.index');
     }
 
     /**
