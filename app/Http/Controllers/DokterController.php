@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Dokter;
+use App\Models\Kamar;
+
 class DokterController extends Controller
 {
     /**
@@ -91,7 +93,8 @@ class DokterController extends Controller
      */
     public function destroy($id)
     {
-        $dokter = Dokter::where('id',$id)->delete();
+        Kamar::where('id_dokter',$id)->delete();
+        Dokter::where('id',$id)->delete();
         return redirect()->route('dokter.index');
     }
 

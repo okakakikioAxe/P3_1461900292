@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pasien;
+use App\Models\Kamar;
 
 class PasienController extends Controller
 {
@@ -92,6 +93,7 @@ class PasienController extends Controller
      */
     public function destroy($id)
     {
+        Kamar::where('id_pasien',$id)->delete();
         Pasien::where('id',$id)->delete();
         return redirect()->route('pasien.index');
     }
