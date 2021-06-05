@@ -12,6 +12,7 @@
             <br>
             <form action="{{ url('dokter') }}" method="post">
                 @csrf
+                @method('POST')
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama">

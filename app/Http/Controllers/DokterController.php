@@ -35,8 +35,8 @@ class DokterController extends Controller
      */
     public function store(Request $request)
     {
-        $nama = $request->get('nama');
-        $jabatan = $request->get('jabatan');
+        $nama = $request->nama;
+        $jabatan = $request->jabatan;
         $dokter = new Dokter;
         $dokter->nama = $nama;
         $dokter->jabatan = $jabatan;
