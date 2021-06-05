@@ -70,9 +70,33 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
-        //
+        $user = User::where('id',$id)->get();
+        foreach($user as $user){
+            $pw_asli = $user->password;
+        }
+        
+        $pw_lama = $request->pw1;
+        $pw_baru_1 = $request->pw2;
+        $pw_baru_2 = $request->pw3;
+        if($pw_asli != $pw_lama){
+            return back()->withInput();
+        }
+        else{
+            if($pw_baru_1 == $pw_baru_2){
+                $nama = $request->nama;
+                $username = $request->username;
+                $user->nama = $nama;
+                $user->username = $username;
+                $user->password = $pw_baru_1;
+                $user->save();
+                return redirect()->route('user.index');
+            }
+            else{
+                return back()->withInput();
+            }
+        }
     }
 
     /**
