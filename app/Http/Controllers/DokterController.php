@@ -75,15 +75,12 @@ class DokterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
         $nama = $request->nama;
         $jabatan = $request->jabatan;
-        $dokter = Dokter::where('id',$id)->get();
-        $dokter->nama = $nama;
-        $dokter->jabatan = $jabatan;
-        $dokter->save();
-        return view('dataDokter0292');
+        Dokter::where('id',$id)->update(['nama'=>$nama,'jabatan'=>$jabatan]);
+        return redirect()->route('dokter.index');
     }
 
     /**

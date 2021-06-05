@@ -5,8 +5,9 @@
 @section('konten')
     <div class="container">
         @foreach ($data as $dokter)
-            <form action="{{ url('dokter/update') }}" method="post">
+            <form action="{{ url('dokter/'.$dokter->id) }}" method="post">
                 @csrf
+                @method('PUT')
                 <div class="mb-3">
                     <label for="id" class="form-label">Id</label>
                     <input type="text" class="form-control" id="id" name="id" value="{{ $dokter->id }}"  disabled>
