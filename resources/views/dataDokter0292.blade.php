@@ -21,7 +21,7 @@
                 <td>{{ $dokter->jabatan }}</td>
                 <td>
                 <a class="btn btn-info " href="{{ url('dokter/'.$dokter->id) }}" role="button">Detail</a>
-                <a class="btn btn-warning " href="#" role="button">Edit</a>
+                <a class="btn btn-warning " href="{{ url('dokter/'.$dokter->id.'/edit') }}" role="button">Edit</a>
                 <a class="btn btn-danger " href="#" role="button">Delete</a>
                 </td>
 
