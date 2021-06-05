@@ -47,7 +47,8 @@ class KamarController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Kamar::where('id',$id)->get();
+        return view('detailKamar0292', ['data'=>$data]);
     }
 
     /**

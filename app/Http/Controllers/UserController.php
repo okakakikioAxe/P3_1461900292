@@ -47,7 +47,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = User::where('id',$id)->get();
+        return view('detailUser0292', ['data'=>$data]);
     }
 
     /**
